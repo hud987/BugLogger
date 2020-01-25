@@ -4,8 +4,8 @@ import axios from 'axios';
 
 export default class TicketCardlist extends Component {
   state = {
-      tickets: [],
-    } 
+    tickets: [],
+  } 
 
   componentDidMount() {
     if (this.props.id != null){
