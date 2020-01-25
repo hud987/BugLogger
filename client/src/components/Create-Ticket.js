@@ -12,7 +12,7 @@ export default function CreateTicket() {
   const [constUsers, setConstUsers] = useState([]);
   const [description, setDescription] = useState("");
   const [projectTitle, setProjectTitle] = useState("");
-  const [type, setType] = useState("");
+  const [type, setType] = useState("Bug");
   const [types] = useState([{ value: "Bug" , label: "Bug"},
                                       { value: "Aesthic" , label: "Aesthic"},
                                       { value: "Feature" , label: "Feature"}]);
