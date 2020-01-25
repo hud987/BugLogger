@@ -17,7 +17,7 @@ export default class DetailsProject extends Component {
         })
         .catch(function (error) {
             console.log(error);
-            window.location = '/projects'
+            //window.location = '/projects'
         })
 
         axios.get('/api/tickets/inproject/'+this.props.match.params.id)

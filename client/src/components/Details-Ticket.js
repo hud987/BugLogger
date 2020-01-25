@@ -16,7 +16,7 @@ export default class DetailsTicket extends Component {
     })
     .catch(function (error) {
       console.log(error);
-      window.location = '/tickets'
+      //window.location = '/tickets'
     })
   }
 
