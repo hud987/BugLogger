@@ -29,11 +29,12 @@ export default class TicketCardlist extends Component {
         const newTickets = response.data.map(ticket => (
           {description: ticket.description,
             assignedToUsername: ticket.assignedToUsername,
-          project: ticket.project,
-          submiter: ticket.submiter,
-          status: ticket.status,
-          type: ticket.type,
-          id: ticket._id}))
+            project: ticket.project,
+            submiter: ticket.submiter,
+            status: ticket.status,
+            type: ticket.type,
+            id: ticket._id
+          }))
         this.setState({tickets: newTickets})
       })
       .catch(function (error) {
@@ -52,7 +53,11 @@ export default class TicketCardlist extends Component {
         {
           this.state.tickets.map(ticket => {
             return(
-            <Card onClick={() => {window.location.href = "/tickets/details/"+ticket.id}} style={{backgroundColor: "white",border: 0,marginBottom:3,padding:5,color: 'black',cursor: 'pointer'}}>
+            <Card 
+              key={ticket.id}
+              onClick={() => {window.location.href = "/tickets/details/"+ticket.id}} 
+              style={{backgroundColor: "white",border: 0,marginBottom:3,padding:5,color: 'black',cursor: 'pointer'}}
+            >
               <div className='float-left'style={{fontSize:14}}>
                 <div className='float-right'>{ticket.status}</div>
               </div>

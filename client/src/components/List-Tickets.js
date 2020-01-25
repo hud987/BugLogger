@@ -55,7 +55,6 @@ export default class TicketList extends Component {
   componentDidMount() {
     axios.get('/api/tickets/')
     .then(response => {
-      console.log(response.data)
       const newTickets = response.data.map(ticket => (
         {description: ticket.description,
           project: ticket.projectTitle,
@@ -76,8 +75,8 @@ export default class TicketList extends Component {
       <div>
         <BootstrapTable 
           bootstrap4
+          keyField='id' 
           bordered={false}
-          keyField='title' 
           data={ this.state.tickets } 
           columns={ this.state.columns } />
       </div>

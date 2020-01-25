@@ -60,7 +60,6 @@ export default class UserList extends Component {
       .then(response => {
         axios.get('/api/users/searchid',{params: {ids: response.data}} )
         .then(response => {
-          console.log(response.data)
           const newUsers = response.data.map(user => (
             {id: user._id,
               username: user.username, 
@@ -75,7 +74,6 @@ export default class UserList extends Component {
     } else { //else show all users
       axios.get('/api/users')
       .then(response => {
-        console.log(response.data)
         const newUsers = response.data.map(user => (
           {id: user._id,
             username: user.username, 
@@ -94,8 +92,8 @@ export default class UserList extends Component {
       return(
       <BootstrapTable 
         bootstrap4 
+        keyField='id'
         bordered={false}
-        keyField='username' 
         data={ this.state.users } 
         columns={ this.state.miniColumns } 
       />)
@@ -103,8 +101,8 @@ export default class UserList extends Component {
       return (
       <BootstrapTable 
         bootstrap4 
+        keyField='id'
         bordered={false}
-        keyField='username' 
         data={ this.state.users } 
         columns={ this.state.columns } 
       />)

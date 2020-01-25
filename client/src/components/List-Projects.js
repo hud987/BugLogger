@@ -39,8 +39,8 @@ export default class ProjectList extends Component {
       style: { fontSize: 14, padding: 3, paddingLeft: 13 },
       headerStyle: { fontSize: 14, paddingBottom: 0,alignItems: "left" },
     },  {
-      dataField: 'details',
-      text: 'Details',
+      dataField: 'id',
+      text: 'id',
       hidden: true,
       style: { fontSize: 14, padding: 3, paddingLeft: 13 },
       headerStyle: { fontSize: 14, paddingBottom: 0,alignItems: "left" },
@@ -50,13 +50,12 @@ export default class ProjectList extends Component {
   componentDidMount() {
     axios.get('api/projects/')
     .then(response => {
-      console.log(response.data)
       const newProjects = response.data.map(project => (
         {title: project.title, 
           description: project.description,
           numUsers: project.users.length,
           numTickets: project.tickets.length,
-          details: project._id}))
+          id: project._id}))
       this.setState({projects: newProjects})
     })
     .catch(function (error) {
@@ -69,8 +68,8 @@ export default class ProjectList extends Component {
       <div>
         <BootstrapTable 
           bootstrap4
+          keyField='id' 
           bordered={false}
-          keyField='title' 
           data={ this.state.projects } 
           columns={ this.state.columns } />
       </div>

@@ -50,7 +50,11 @@ export default class ProjectCardlist extends Component {
           //put info of each project into a card
           this.state.projects.map(project => {
             return(
-            <Card onClick={() => {window.location.href = "/projects/details/"+project.id}} style={{backgroundColor: "white",border: 0,marginBottom:3,padding:5,color: 'black',cursor: 'pointer'}}>
+            <Card 
+              key={project.id} 
+              onClick={() => {window.location.href = "/projects/details/"+project.id}} 
+              style={{backgroundColor: "white",border: 0,marginBottom:3,padding:5,color: 'black',cursor: 'pointer'}}
+            >
               <h3>{project.title}</h3>
               <h6>{project.description}</h6>
               <div><div className='float-right'style={{fontSize:14}}>tickets: {project.tickets}</div>
