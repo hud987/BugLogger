@@ -5,6 +5,9 @@ const path = require('path');
 //const bodyParser = require('body-parser');
 
 const items = require('./routes/api/items')
+const projects = require('./routes/api/projects')
+const tickets = require('./routes/api/tickets')
+const users = require('./routes/api/users')
 
 const app = express();
 
@@ -20,6 +23,9 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // Use Routes
 app.use('/api/items', items);
+app.use('/api/projects', projects);
+app.use('/api/tickets', tickets);
+app.use('/api/users', users);
 
 // Serve static assests if in production
 if(process.env.NODE_ENV === 'production') {

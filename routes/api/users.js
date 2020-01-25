@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let User = require('../models/user.model');
+let User = require('../../models/user.model');
 ObjectId = require('mongodb').ObjectID;
 
 //gets all users, useful for debuging

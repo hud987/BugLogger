@@ -4,21 +4,19 @@ import manageUsers from '../images/manage-projects.png';
 import projects from '../images/projects.png';
 import tickets from '../images/tickets.png';
 
-import profile from '../images/profile.png';
-import logoutImage from '../images/logout.png';
+//import profile from '../images/profile.png';
+//import logoutImage from '../images/logout.png';
 
 // Be sure to include styles at some point, probably during your bootstraping
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
-import React, { Component, useState } from 'react';
+import React from 'react';
 //import { BrowserRouter as Router, Route } from "react-router-dom";
 //import { useAuth0 } from "../react-auth0-spa";
 
 export default function Sidebar(){
   //const { logout } = useAuth0();
 
-  const [userExpanded, setUserExpanded] = useState(false);
-  const [userExpandedArrow, setUserExpandedArrow] = useState("▼");
   var selected="home"
   var str = window.location.pathname.split("/"); 
   if (str[1] === 'user'){
@@ -32,8 +30,6 @@ export default function Sidebar(){
   }
 
   return(
-
-    
       <SideNav>
         <SideNav.Toggle onClick={(selected) => {
             //console.log(this.props.expanded)
@@ -116,8 +112,6 @@ export default function Sidebar(){
           */}
         </SideNav.Nav>
       </SideNav>
-    
-    
   )
 }
 

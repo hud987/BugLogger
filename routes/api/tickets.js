@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Ticket = require('../models/ticket.model');
+let Ticket = require('../../models/ticket.model');
 ObjectId = require('mongodb').ObjectID;
 
 //get all tickets
