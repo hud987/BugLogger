@@ -34,7 +34,7 @@ export default class ProjectList extends Component {
       dataField: '',
       text: '',
       formatter: (cell, row) => { return (
-        <div><a href={"/projects/details/"+row.details}>Details</a></div>
+        <div><a href={"/projects/details/"+row.id}>Details</a></div>
         )},
       style: { fontSize: 14, padding: 3, paddingLeft: 13 },
       headerStyle: { fontSize: 14, paddingBottom: 0,alignItems: "left" },
