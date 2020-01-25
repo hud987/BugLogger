@@ -48,7 +48,7 @@ export default class ProjectList extends Component {
   } 
 
   componentDidMount() {
-    axios.get('api/projects/')
+    axios.get('/api/projects/')
     .then(response => {
       const newProjects = response.data.map(project => (
         {title: project.title, 

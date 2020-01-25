@@ -21,11 +21,11 @@ const ticketSchema = new Schema({
   projectTitle: {
     //type: { type: Schema.Types.ObjectId, ref: 'Project' },
     type: String,
-  },
+  },/*
   submiter: {
     //type: { type: Schema.Types.ObjectId, ref: 'User' },
     type: String,
-  },/*
+  },
   priority: {
     type: String,
   },*/

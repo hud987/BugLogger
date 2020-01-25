@@ -42,7 +42,6 @@ router.route('/add').post((req, res) => {
     const assignedToUsername = req.body.assignedToUsername;
     const project = req.body.project;
     const projectTitle = req.body.projectTitle;
-    const submiter = req.body.submiter;
     const status = "Open"
     const type = req.body.type;
 
@@ -52,7 +51,6 @@ router.route('/add').post((req, res) => {
         assignedToUsername,
         project,
         projectTitle,
-        submiter,
         status,
         type});
 

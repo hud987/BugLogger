@@ -4,7 +4,6 @@ const cors = require('cors');
 const path = require('path');
 //const bodyParser = require('body-parser');
 
-const items = require('./routes/api/items')
 const projects = require('./routes/api/projects')
 const tickets = require('./routes/api/tickets')
 const users = require('./routes/api/users')
@@ -22,7 +21,6 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.log(err));
 
 // Use Routes
-app.use('/api/items', items);
 app.use('/api/projects', projects);
 app.use('/api/tickets', tickets);
 app.use('/api/users', users);

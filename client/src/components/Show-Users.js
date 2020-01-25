@@ -13,7 +13,8 @@ export default class ShowUsers extends Component {
           <Col style={{paddingTop: 14}}>
             <Button className="float-right"
             onClick={() => {window.location.href = "/users/create"}}
-            size = "sm"
+            color='primary'
+            size="sm"
             style={{backgroundColor: "#007bff", margin: 0, marginBottom: 10, border: 0}} 
             >
             <h6 style={{paddingTop: 7, fontWeight: "bold", fontSize: 15}}>Add User</h6>

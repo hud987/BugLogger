@@ -13,8 +13,9 @@ export default class ShowProjects extends Component {
           <Col style={{paddingTop: 14}}>
             <Button className="float-right"
             onClick={() => {window.location.href = "/projects/create"}}                
+            color='primary'
             size = "sm"
-            style={{backgroundColor: "#007bff", margin: 0, marginBottom: 10, border: 0}} 
+            style={{margin: 0, marginBottom: 10, border: 0}} 
             >
             <h6 style={{paddingTop: 7, fontWeight: "bold", fontSize: 12}}>Create Project</h6>
             </Button>

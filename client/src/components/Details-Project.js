@@ -85,6 +85,7 @@ export default class DetailsProject extends Component {
                             this.state.tickets.map(ticket => {
                                 return(
                                 <Card 
+                                    key={ticket.id}
                                     onClick={() => {window.location.href = "/tickets/details/"+ticket.id}}
                                     style={{backgroundColor: "white", border: 0, marginBottom:3, padding:5, color: 'black', cursor: 'pointer'}}
                                 >
