@@ -47,7 +47,7 @@ export default class TicketCardlist extends Component {
     return (
       <div>
         <Card style={{background: 'linear-gradient(to right bottom, #888888, #cccccc)', border: 0, height: this.props.height, padding: 3}}>
-        <h6 style={{paddingLeft: 17,paddingTop: 5}}>Tickets</h6>
+        <h6 style={{color: 'white',paddingLeft: 17,paddingTop: 5}}>Tickets</h6>
         <Card style={{backgroundColor: 'transparent' ,border: 0, height: this.props.height, overflowY: "scroll"}}>
         <Container style={{}}>
         {
